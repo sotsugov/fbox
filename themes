@@ -9,7 +9,7 @@ cp -r .fonts/ ${HOME}/.fonts
 cp -r .icons/ ${HOME}/.icons
 
 # Theme, Icons and Cursor
-wget https://github.com/dracula/gtk/archive/refs/heads/master.zip && unzip -d ~/.themes/Dracula
+wget https://github.com/dracula/gtk/archive/refs/heads/master.zip && unzip "master.zip" -d ~/.themes/Dracula
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 
 gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
