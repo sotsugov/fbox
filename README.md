@@ -13,6 +13,8 @@ git clone --depth=1 --branch=main https://github.com/sotsugov/fbox.git && cd fbo
 sudo sysprep
 sudo software
 bash themes
-bash devcmd
+
+# Manual Part
+devcmd
 
 ```

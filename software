@@ -20,7 +20,8 @@ sublime-text \
 zsh \
 neofetch \
 code \
-gnome-tweak-tool
+gnome-tweak-tool \
+chsh
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install --assumeyes flathub \
