@@ -3,6 +3,8 @@ set -o errexit
 set -o nounset
 
 # add symlinks
+rm $HOME/.zshrc
+rm $HOME/.p10k.zsh
 ln -s /.zshrc $HOME/.zshrc
 ln -s /.p10k.zsh $HOME/.p10k.zsh
 
