@@ -2,12 +2,6 @@
 set -o errexit
 set -o nounset
 
-# Ask for the administrator's password in advance.
-sudo --validate
-
-# Keep-alive: update existing user's password timestamp until this script finishes on the current machine.
-while true; do sudo --non-interactive true; sleep 60; kill -s 0 "$$" || exit; done 2> /dev/null &
-
 # add symlinks
 ln -s /.zshrc $HOME/.zshrc
 ln -s /.zshrc $HOME/.p10k
@@ -15,7 +9,7 @@ ln -s /.zshrc $HOME/.p10k
 # install ohmyzsh and plugins
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-git clone https://github.com/zsh-users/zsh-syntax-hig
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # load custom terminal profile
 cd profiles
