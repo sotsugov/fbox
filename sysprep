@@ -11,5 +11,5 @@ while true; do sudo --non-interactive true; sleep 60; kill -s 0 "$$" || exit; do
 # Part I: System Updates
 dnf config-manager --set-disabled google-chrome
 dnf config-manager --set-disabled phracek-PyCharm
-# sudo dnf install --assumeyes akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda
-sudo dnf update --refresh --assumeyes && reboot
+# dnf install --assumeyes akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda
+dnf update --refresh --assumeyes && reboot
