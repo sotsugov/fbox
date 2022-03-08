@@ -26,3 +26,5 @@ gsettings set org.gnome.desktop.interface document-font-name 'Rational Display T
 gsettings set org.gnome.desktop.interface font-name 'Rational Display Test 11'
 gsettings set org.gnome.desktop.interface monospace-font-name 'Fira Code 11'
 gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Rational Display Test Semi-Bold 11'
+
+dconf load /org/gnome/terminal/legacy/profiles:/ < profiles/gnome-terminal-profiles.dconf
