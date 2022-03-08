@@ -5,12 +5,12 @@ set -o nounset
 # Keep-alive: update existing user's password timestamp until this script finishes on the current machine.
 while true; do sudo --non-interactive true; sleep 60; kill -s 0 "$$" || exit; done 2> /dev/null &
 
-cp -r .fonts/ ${HOME}/.fonts
-cp -r .icons/ ${HOME}/.icons
+cp -r .fonts/ $HOME/.fonts
+cp -r .icons/ $HOME/.icons
 
 # Theme, Icons and Cursor
 wget https://github.com/dracula/gtk/archive/refs/heads/master.zip \
-&& unzip master.zip -d ${HOME}/.themes/Dracula
+&& unzip master.zip -d $HOME/.themes/Dracula
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 
 gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
