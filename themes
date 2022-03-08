@@ -9,6 +9,7 @@ cp -r .fonts/ ${HOME}/.fonts
 cp -r .icons/ ${HOME}/.icons
 
 # Theme, Icons and Cursor
+mkdir -p ~/.themes
 git clone --depth=1 https://github.com/dracula/gtk.git ~/.themes/Dracula
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 
