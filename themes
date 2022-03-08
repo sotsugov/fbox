@@ -13,8 +13,8 @@ wget https://github.com/dracula/gtk/archive/refs/heads/master.zip \
 && unzip master.zip -d $HOME/.themes/
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 
-gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
-gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
+gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
+gsettings set org.gnome.desktop.wm.preferences theme "gtk-master"
 gsettings set org.gnome.desktop.interface icon-theme 'ePapirus-Dark'
 gsettings set org.gnome.desktop.interface cursor-theme 'Simp1e-dark'
 
