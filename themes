@@ -10,7 +10,8 @@ cp -r .icons/ $HOME/.icons
 
 # Theme, Icons and Cursor
 wget https://github.com/dracula/gtk/archive/refs/heads/master.zip \
-&& unzip master.zip -d $HOME/.themes/
+&& unzip master.zip -d $HOME/.themes/ && rm master.zip
+
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 
 gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
@@ -27,5 +28,3 @@ gsettings set org.gnome.desktop.interface document-font-name 'Rational Display T
 gsettings set org.gnome.desktop.interface font-name 'Rational Display Test 11'
 gsettings set org.gnome.desktop.interface monospace-font-name 'Fira Code 11'
 gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Rational Display Test Semi-Bold 11'
-
-dconf load /org/gnome/terminal/legacy/profiles:/ < profiles/gnome-terminal-profiles.dconf
