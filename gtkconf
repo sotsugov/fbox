@@ -17,12 +17,10 @@ unzip themes/dracula-icons.zip -d $HOME/.icons/
 
 gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
 gsettings set org.gnome.desktop.wm.preferences theme "gtk-master"
-gsettings set org.gnome.desktop.interface icon-theme 'ePapirus-Dark'
+gsettings set org.gnome.desktop.interface icon-theme 'Dracula'
 gsettings set org.gnome.desktop.interface cursor-theme 'Simp1e-dark'
-
 gsettings set org.gnome.mutter center-new-windows 'true'
 gsettings set org.gnome.desktop.interface enable-animations false
-
 gsettings set org.gnome.desktop.interface font-antialiasing 'rgba'
 gsettings set org.gnome.desktop.interface font-hinting 'none'
 gsettings set org.gnome.desktop.interface document-font-name 'Rational Display Test 11'
