@@ -8,12 +8,13 @@ sh -c "RUNZSH=no $(wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/m
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+# load custom terminal profile
+dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.dconf
+
 # add symlinks
-rm -f $HOME/.zshrc
-rm -f $HOME/.p10k.zsh
+# rm -f $HOME/.zshrc
+# rm -f $HOME/.p10k.zsh
 ln -s dotfiles/.zshrc $HOME/.zshrc
 ln -s dotfiles/.p10k.zsh $HOME/.p10k.zsh
 
-# load custom terminal profile
 # cd profiles
-# dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.dconf
