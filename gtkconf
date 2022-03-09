@@ -16,13 +16,15 @@ rm -rf $HOME/.themes/gtk-master && unzip -q themes/dracula-gtk.zip -d $HOME/.the
 rm -rf $HOME/.icons/Simp1e-dark && tar -xf themes/Simp1e-dark.tgz -C $HOME/.icons/
 rm -rf $HOME/.icons/Dracula && unzip -q themes/dracula-icons.zip -d $HOME/.icons/
 
+wget -O /tmp/wallpaper.png 'https://user.fm/files/v2-7751078cd7995e5b499e0d5331609542/Fluent-building-night.png' && \
+gsettings set org.gnome.desktop.background picture-uri 'file:///tmp/wallpaper.png'
+
 gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
 gsettings set org.gnome.desktop.wm.preferences theme "gtk-master"
 gsettings set org.gnome.desktop.interface icon-theme 'Dracula'
 gsettings set org.gnome.desktop.interface cursor-theme 'Simp1e-dark'
 gsettings set org.gnome.mutter center-new-windows 'true'
 gsettings set org.gnome.desktop.interface enable-animations false
-gsettings set org.gnome.desktop.background picture-uri 'file:///home/o/fed-home/themes/wallpaper_jul_2021.jpg'
 
 gsettings set org.gnome.desktop.interface font-antialiasing 'rgba'
 gsettings set org.gnome.desktop.interface font-hinting 'none'
