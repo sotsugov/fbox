@@ -9,13 +9,12 @@ while true; do sudo --non-interactive true; sleep 60; kill -s 0 "$$" || exit; do
 mkdir -p $HOME/.icons
 mkdir -p $HOME/.themes
 mkdir -p $HOME/.fonts
+
 cp -r fonts/ $HOME/.fonts
-rm -rf $HOME/.themes/gtk-master
-unzip themes/dracula-gtk.zip -d $HOME/.themes/
-rm -rf $HOME/.icons/Simp1e-dark
-tar -xvf themes/Simp1e-dark.tgz -C $HOME/.icons/
-rm -rf $HOME/.icons/Dracula
-unzip themes/dracula-icons.zip -d $HOME/.icons/
+
+rm -rf $HOME/.themes/gtk-master; unzip themes/dracula-gtk.zip -d $HOME/.themes/
+rm -rf $HOME/.icons/Simp1e-dark; tar -xvf themes/Simp1e-dark.tgz -C $HOME/.icons/
+rm -rf $HOME/.icons/Dracula; unzip themes/dracula-icons.zip -d $HOME/.icons/
 
 gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
 gsettings set org.gnome.desktop.wm.preferences theme "gtk-master"
@@ -23,6 +22,8 @@ gsettings set org.gnome.desktop.interface icon-theme 'Dracula'
 gsettings set org.gnome.desktop.interface cursor-theme 'Simp1e-dark'
 gsettings set org.gnome.mutter center-new-windows 'true'
 gsettings set org.gnome.desktop.interface enable-animations false
+gsettings set org.gnome.desktop.background picture-uri 'https://user.fm/files/v2-5ad78ae45d34581e36e5010dfd8eae67/wallpaper_jul_2021.jpg'
+
 gsettings set org.gnome.desktop.interface font-antialiasing 'rgba'
 gsettings set org.gnome.desktop.interface font-hinting 'none'
 gsettings set org.gnome.desktop.interface document-font-name 'Rational Display Test 11'
