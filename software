@@ -17,7 +17,6 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf check-update
 sudo dnf install --assumeyes \
 sublime-text \
-zsh \
 neofetch \
 gnome-tweak-tool \
 util-linux-user \
