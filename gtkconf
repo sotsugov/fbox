@@ -6,15 +6,14 @@ set -o nounset
 while true; do sudo --non-interactive true; sleep 60; kill -s 0 "$$" || exit; done 2> /dev/null &
 
 cp -r .fonts/ $HOME/.fonts
-cp -r .icons/ $HOME/.icons
 
 # Theme, Icons and Cursor
 rm -rf $HOME/.themes/gtk-master
-unzip themes/gtk-master.zip -d $HOME/.themes/
+unzip themes/dracula-gtk.zip -d $HOME/.themes/
 rm -rf $HOME/.icons/Simp1e-dark
 tar -xvf themes/Simp1e-dark.tgz -C $HOME/.icons/
-
-wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
+rm -rf $HOME/.icons/Dracula
+unzip themes/dracula-icons.zip -d $HOME/.icons/
 
 gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
 gsettings set org.gnome.desktop.wm.preferences theme "gtk-master"

@@ -19,9 +19,9 @@ sudo dnf install --assumeyes \
 sublime-text \
 zsh \
 neofetch \
-code \
 gnome-tweak-tool \
-util-linux-user
+util-linux-user \
+code
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install --assumeyes flathub \
