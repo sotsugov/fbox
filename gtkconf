@@ -12,9 +12,9 @@ mkdir -p $HOME/.fonts
 
 cp -r fonts/ $HOME/.fonts
 
-rm -rf $HOME/.themes/gtk-master; unzip themes/dracula-gtk.zip -d $HOME/.themes/
-rm -rf $HOME/.icons/Simp1e-dark; tar -xvf themes/Simp1e-dark.tgz -C $HOME/.icons/
-rm -rf $HOME/.icons/Dracula; unzip themes/dracula-icons.zip -d $HOME/.icons/
+rm -rf $HOME/.themes/gtk-master && unzip -q themes/dracula-gtk.zip -d $HOME/.themes/
+rm -rf $HOME/.icons/Simp1e-dark && tar -xf themes/Simp1e-dark.tgz -C $HOME/.icons/
+rm -rf $HOME/.icons/Dracula && unzip -q themes/dracula-icons.zip -d $HOME/.icons/
 
 gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
 gsettings set org.gnome.desktop.wm.preferences theme "gtk-master"
