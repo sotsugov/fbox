@@ -12,7 +12,7 @@ git clone https://github.com/sotsugov/fed-home
 cd fed-home
 sudo bash sysprep
 sudo bash software
-bash themes
+bash gtkconf
 
 # Manual Part
 devcmd
