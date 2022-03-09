@@ -3,20 +3,17 @@ set -o errexit
 set -o nounset
 
 # install ohmyzsh and plugins
-cwd=$(pwd)
 sudo dnf install zsh
 rm -rf $HOME/.oh-my-zsh && sh -c "RUNZSH=no $(wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # load custom terminal profile
-dconf load /org/gnome/terminal/legacy/profiles:/ < themes/gnome-terminal-profiles.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/ < $(pwd)/themes/gnome-terminal-profiles.dconf
 
 # add symlinks
-rm -f $HOME/.zshrc; touch $HOME/.zshrc
-rm -f $HOME/.p10k.zsh; touch $HOME/.p10k.zsh
+rm -f $HOME/.zshrc
+rm -f $HOME/.p10k.zsh
 
-ln -s ${cwd}dotfiles/.zshrc $HOME/.zshrc
-ln -s ${cwd}dotfiles/.p10k.zsh $HOME/.p10k.zsh
-
-# cd profiles
+ln -s $(pwd)/dotfiles/.zshrc $HOME/.zshrc
+ln -s $(pwd)/dotfiles/.p10k.zsh $HOME/.p10k.zsh
