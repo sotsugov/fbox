@@ -22,7 +22,7 @@ gsettings set org.gnome.desktop.interface icon-theme 'Dracula'
 gsettings set org.gnome.desktop.interface cursor-theme 'Simp1e-dark'
 gsettings set org.gnome.mutter center-new-windows 'true'
 gsettings set org.gnome.desktop.interface enable-animations false
-gsettings set org.gnome.desktop.background picture-uri 'file:/${dir}/themes/wallpaper_jul_2021.jpg'
+gsettings set org.gnome.desktop.background picture-uri 'file:///home/o/fed-home/themes/wallpaper_jul_2021.jpg'
 
 gsettings set org.gnome.desktop.interface font-antialiasing 'rgba'
 gsettings set org.gnome.desktop.interface font-hinting 'none'
