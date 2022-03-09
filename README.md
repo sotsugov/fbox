@@ -7,11 +7,11 @@ sudo su
 sudo echo -e "max_parallel_downloads=10\nfastestmirror=true" >> /etc/dnf/dnf.conf
 sudo sh -c 'fwupdmgr refresh --force && fwupdmgr update --assume-yes'
 
-mkdir dev/
-cd dev
-git clone --depth=1 --branch=main https://github.com/sotsugov/fbox.git && cd fbox
-sudo sysprep
-sudo software
+# Part 1: Installation
+git clone https://github.com/sotsugov/fed-home
+cd fed-home
+sudo bash sysprep
+sudo bash software
 bash themes
 
 # Manual Part
