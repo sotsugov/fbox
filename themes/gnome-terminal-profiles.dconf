@@ -3,16 +3,11 @@ default='ef461a33-4535-49a4-a101-58f652cb8b24'
 list=['ef461a33-4535-49a4-a101-58f652cb8b24']
 
 [:ef461a33-4535-49a4-a101-58f652cb8b24]
-background-color='#282A36'
-bold-color='#6E46A4'
-bold-color-same-as-fg=false
-custom-command='zsh'
-default-size-columns=120
-default-size-rows=30
-font='MesloLGS NF 11'
-foreground-color='#F8F8F2'
-palette=['#262626', '#E356A7', '#42E66C', '#E4F34A', '#9B6BDF', '#E64747', '#75D7EC', '#EFA554', '#7A7A7A', '#FF79C6', '#50FA7B', '#F1FA8C', '#BD93F9', '#FF5555', '#8BE9FD', '#FFB86C']
-use-custom-command=true
-use-system-font=false
+background-color='rgb(26,27,38)'
+bold-color-same-as-fg=true
+font='Rec Mono Linear 15'
+foreground-color='rgb(192,202,245)'
+palette=['rgb(21,22,30)', 'rgb(247,118,142)', 'rgb(158,206,106)', 'rgb(224,175,104)', 'rgb(122,162,247)', 'rgb(187,154,247)', 'rgb(125,207,255)', 'rgb(169,177,214)', 'rgb(65,72,104)', 'rgb(247,118,142)', 'rgb(158,206,106)', 'rgb(224,175,104)', 'rgb(122,162,247)', 'rgb(187,154,247)', 'rgb(125,207,255)', 'rgb(192,202,245)']
+use-system-font=true
 use-theme-colors=false
-visible-name='Default'
+visible-name='TokyoNight Night'

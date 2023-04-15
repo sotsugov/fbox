@@ -10,15 +10,18 @@ mkdir -p $HOME/.icons
 mkdir -p $HOME/.themes
 mkdir -p $HOME/.fonts
 
+# fonts and reload cache
 cp -r fonts/ $HOME/.fonts
+fc-cache -f
 
 rm -rf $HOME/.themes/gtk-master && unzip -q themes/dracula-gtk.zip -d $HOME/.themes/
 rm -rf $HOME/.icons/Simp1e-dark && tar -xf themes/Simp1e-dark.tgz -C $HOME/.icons/
 rm -rf $HOME/.icons/Dracula && unzip -q themes/dracula-icons.zip -d $HOME/.icons/
 
-wget -O /tmp/wallpaper.png 'https://user.fm/files/v2-7751078cd7995e5b499e0d5331609542/Fluent-building-night.png' && \
-gsettings set org.gnome.desktop.background picture-uri 'file:///tmp/wallpaper.png'
+# set wallpaper
+gsettings set org.gnome.desktop.background picture-uri-dark ''$(pwd)'/images/wallpaper.jpg'
 
+# configure interface
 gsettings set org.gnome.desktop.interface gtk-theme "gtk-master"
 gsettings set org.gnome.desktop.wm.preferences theme "gtk-master"
 gsettings set org.gnome.desktop.interface icon-theme 'Dracula'
@@ -26,10 +29,16 @@ gsettings set org.gnome.desktop.interface cursor-theme 'Simp1e-dark'
 gsettings set org.gnome.mutter center-new-windows 'true'
 gsettings set org.gnome.desktop.interface enable-animations false
 
+# set typeface settings
 gsettings set org.gnome.desktop.interface font-antialiasing 'rgba'
 gsettings set org.gnome.desktop.interface font-hinting 'none'
-gsettings set org.gnome.desktop.interface document-font-name 'Rational Display Test 11'
-gsettings set org.gnome.desktop.interface font-name 'Rational Display Test 11'
-gsettings set org.gnome.desktop.interface monospace-font-name 'Fira Code 11'
-gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Rational Display Test Semi-Bold 11'
+gsettings set org.gnome.desktop.interface document-font-name 'Rec Mono Semicasual 10'
+gsettings set org.gnome.desktop.interface font-name 'Rec Mono Semicasual 10'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Rec Mono Linear 10'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Rec Mono Semicasual Bold 10'
 
+# load custom terminal profile
+dconf load /org/gnome/terminal/legacy/profiles:/ < $(pwd)/themes/gnome-terminal-profiles.dconf
+
+# update sublime profile
+cp -u $(pwd)/themes/Preferences.sublime-settings $HOME/.config/sublime-text/Packages/User/Preferences.sublime-settings
